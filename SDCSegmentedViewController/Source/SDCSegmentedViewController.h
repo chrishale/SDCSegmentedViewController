@@ -41,7 +41,9 @@ typedef NS_ENUM(NSInteger, SDCSegmentedViewControllerControlPosition) {
 @property (nonatomic) BOOL switchesWithSwipe;
 @property (nonatomic, readonly) UISwipeGestureRecognizer *leftSwipeRecognizer;
 @property (nonatomic, readonly) UISwipeGestureRecognizer *rightSwipeRecognizer;
-
+@property (nonatomic, readonly) NSMutableArray *viewControllers;
+@property (nonatomic, readonly) NSInteger currentSelectedIndex;
+	
 @property (nonatomic) NSUInteger segmentedControlWidth;
 
 // NSArray of UIViewController subclasses
@@ -56,6 +58,8 @@ typedef NS_ENUM(NSInteger, SDCSegmentedViewControllerControlPosition) {
 
 // Add segments from storyboard. The strings in the array should match segue identifiers in the storyboard.
 - (void)addStoryboardSegments:(NSArray *)segments;
+
+- (void)transitionToViewControllerWithIndex:(NSUInteger *)index;
 
 @end
 
