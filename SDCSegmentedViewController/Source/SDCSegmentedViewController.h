@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, SDCSegmentedViewControllerControlPosition) {
 @property (nonatomic, readonly) UISwipeGestureRecognizer *leftSwipeRecognizer;
 @property (nonatomic, readonly) UISwipeGestureRecognizer *rightSwipeRecognizer;
 @property (nonatomic, readonly) NSMutableArray *viewControllers;
-@property (nonatomic, readonly) NSInteger currentSelectedIndex;
+@property (nonatomic) NSInteger currentSelectedIndex;
 	
 @property (nonatomic) NSUInteger segmentedControlWidth;
 
